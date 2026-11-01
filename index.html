@@ -1,0 +1,342 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Império Web</title>
+  <meta name="description" content="A Império Web cria sites com agendamento online, loja virtual e WhatsApp integrado para o seu negócio receber clientes todos os dias.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scenes/stage.css">
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<div class="moldura">
+
+  <!-- Hero: a coroa do nome rompe a própria palavra enquanto a página desce (cena "coroa") -->
+  <header class="scene hero-cena" id="topo" data-scene="coroa" data-options='{"hold": 1.5}' aria-label="Império Web">
+    <div class="scene-stage">
+      <div class="hero" id="hero">
+        <div class="hero-halo" aria-hidden="true"></div>
+        <canvas class="imperio-fundo" id="imperio-fundo" aria-hidden="true"></canvas>
+
+        <nav class="nav" aria-label="Principal">
+          <div class="nav-esquerda">
+            <a class="marca" href="#topo" aria-label="Império Web, início">
+              <svg class="marca-coroa" viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M4 24 6 9l6 7 4-10 4 10 6-7 2 15z" fill="currentColor"/>
+                <rect x="4" y="25.5" width="24" height="3" rx="1.5" fill="currentColor"/>
+              </svg>
+            </a>
+            <ul class="nav-links">
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#como-funciona">Como funciona</a></li>
+              <li><a href="#monte">Monte seu site</a></li>
+              <li><a href="#duvidas">Dúvidas</a></li>
+            </ul>
+          </div>
+          <a class="nav-orcamento" href="https://wa.me/5562981343567?text=Ol%C3%A1%2C%20Imp%C3%A9rio%20Web!%20Quero%20um%20or%C3%A7amento%20de%20site." target="_blank" rel="noopener">Orçamento</a>
+        </nav>
+
+        <h1 class="hero-palavra">
+          <span class="palavra-esq" data-move aria-hidden="true">IMP</span><span class="palavra-dir" data-move aria-hidden="true">ÉRIO</span>
+          <span class="visualmente-oculto">Império Web: sites com agendamento e vendas online</span>
+        </h1>
+
+        <svg class="coroa-reserva" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M4 24 6 9l6 7 4-10 4 10 6-7 2 15z" fill="#0c0a14" stroke="#b98aff" stroke-width=".5"/>
+          <rect x="4" y="25.5" width="24" height="3" rx="1.5" fill="#0c0a14" stroke="#b98aff" stroke-width=".5"/>
+        </svg>
+        <canvas class="coroa-3d" id="coroa-3d" aria-hidden="true"></canvas>
+
+        <div class="hero-base" data-move>
+          <div class="hero-base-texto">
+            <p class="hero-lema">Sites que agendam e vendem</p>
+            <p class="hero-texto">Criamos sites com agendamento online, loja virtual e WhatsApp integrado para o seu negócio receber clientes todo dia.</p>
+            <div class="hero-acoes">
+              <a class="botao botao-destaque botao-pequeno botao-brilho" href="https://wa.me/5562981343567?text=Ol%C3%A1%2C%20Imp%C3%A9rio%20Web!%20Quero%20um%20or%C3%A7amento%20de%20site." target="_blank" rel="noopener">Pedir orçamento</a>
+              <a class="botao botao-escuro botao-pequeno" href="#servicos">Ver serviços</a>
+            </div>
+          </div>
+          <a class="hero-telefone" href="tel:+5562981343567">(62) 98134-3567</a>
+        </div>
+
+        <div class="hero-frase" data-move>
+          <p>Seu império começa online.</p>
+          <a class="botao botao-destaque botao-brilho" href="https://wa.me/5562981343567?text=Ol%C3%A1%2C%20Imp%C3%A9rio%20Web!%20Quero%20um%20or%C3%A7amento%20de%20site." target="_blank" rel="noopener">Começar pelo WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Serviços: bento 2x2 assimétrico -->
+    <section class="secao" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="secao-cabeca">
+        <p class="etiqueta surgir">Serviços</p>
+        <h2 class="secao-titulo surgir" id="servicos-titulo">Tudo que seu site precisa fazer</h2>
+        <p class="secao-sub surgir">Cada site sai pronto para trabalhar por você: marcar horários, vender, conversar e ser encontrado.</p>
+      </div>
+
+      <div class="bento">
+
+        <article class="card card-estreito surgir">
+          <div class="card-texto">
+            <h3>Agendamento online</h3>
+            <p>O cliente escolhe o serviço, o dia e o horário sozinho. Você recebe o aviso e a agenda se organiza.</p>
+          </div>
+          <div class="ui ui-agenda" data-ui id="agenda-demo" role="group" aria-label="Demonstração de agendamento: escolha um dia e um horário">
+            <div class="agenda-cabeca"><span>Novembro</span><span>Corte + barba</span></div>
+            <div class="agenda-dias" id="agenda-dias">
+              <button type="button" data-dia="segunda" aria-pressed="false">Seg<b>10</b></button>
+              <button type="button" data-dia="terça" aria-pressed="false">Ter<b>11</b></button>
+              <button type="button" data-dia="quarta" aria-pressed="true" class="ativo">Qua<b>12</b></button>
+              <button type="button" data-dia="quinta" aria-pressed="false">Qui<b>13</b></button>
+              <button type="button" data-dia="sexta" aria-pressed="false">Sex<b>14</b></button>
+            </div>
+            <div class="agenda-horas" id="agenda-horas">
+              <button type="button" data-hora="09:00" aria-pressed="false">09:00</button>
+              <button type="button" data-hora="09:30" aria-pressed="false">09:30</button>
+              <button type="button" data-hora="10:00" aria-pressed="false">10:00</button>
+              <button type="button" data-hora="10:30" aria-pressed="false">10:30</button>
+              <button type="button" data-hora="11:00" aria-pressed="true" class="escolhido">11:00</button>
+              <button type="button" data-hora="11:30" aria-pressed="false">11:30</button>
+            </div>
+            <button type="button" class="agenda-confirmar" id="agenda-confirmar">Confirmar quarta, 11:00</button>
+            <p class="agenda-aviso" id="agenda-aviso" role="status"></p>
+          </div>
+        </article>
+
+        <article class="card card-largo surgir">
+          <div class="card-texto">
+            <h3>Loja virtual e vendas online</h3>
+            <p>Catálogo, carrinho e pagamento por Pix ou cartão. Seus produtos à venda a qualquer hora, sem depender do balcão.</p>
+          </div>
+          <div class="ui ui-loja" data-ui aria-hidden="true">
+            <div class="produto">
+              <div class="produto-foto produto-foto-a"></div>
+              <span class="produto-nome">Kit barba completo</span>
+              <span class="produto-preco">R$ 89,90</span>
+              <span class="produto-botao">Comprar</span>
+            </div>
+            <div class="produto">
+              <div class="produto-foto produto-foto-b"></div>
+              <span class="produto-nome">Pomada modeladora</span>
+              <span class="produto-preco">R$ 39,90</span>
+              <span class="produto-botao">Comprar</span>
+            </div>
+            <div class="carrinho">
+              <span class="carrinho-titulo">Seu carrinho</span>
+              <span class="carrinho-linha"><span>Kit barba completo</span><span>R$ 89,90</span></span>
+              <span class="carrinho-linha"><span>Entrega</span><span>Grátis</span></span>
+              <span class="carrinho-total"><span>Total</span><span>R$ 89,90</span></span>
+              <span class="carrinho-pix">Pagar com Pix</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card-largo surgir">
+          <div class="card-texto">
+            <h3>WhatsApp integrado</h3>
+            <p>Botão direto para a sua conversa, com a mensagem já escrita. O cliente chega sabendo o que quer, e você responde do celular.</p>
+          </div>
+          <div class="ui ui-conversa" data-ui aria-hidden="true">
+            <div class="conversa-topo"><span class="conversa-foto"></span><span>Seu negócio<small>online</small></span></div>
+            <p class="balao balao-cliente">Olá! Vi no site, quero agendar um corte para quarta às 11h.</p>
+            <p class="balao balao-loja">Perfeito! Seu horário está confirmado. Até quarta!</p>
+            <p class="balao balao-cliente">Obrigado!</p>
+          </div>
+        </article>
+
+        <article class="card card-estreito surgir">
+          <div class="card-texto">
+            <h3>Encontrado no Google</h3>
+            <p>Site rápido, feito para celular e preparado para a busca e o Google Maps. Quem procura perto de você, acha você.</p>
+          </div>
+          <div class="ui ui-busca" data-ui aria-hidden="true">
+            <div class="busca-campo">barbearia perto de mim</div>
+            <div class="busca-resultado">
+              <span class="busca-url">seunegocio.com.br</span>
+              <span class="busca-nome">Seu Negócio · Agende online</span>
+              <span class="busca-desc">Corte, barba e tratamentos. Escolha seu horário pelo site.</span>
+            </div>
+            <div class="busca-mapa"><span class="busca-pino"></span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Como funciona: degraus que sobem -->
+    <section class="secao" id="como-funciona" aria-labelledby="processo-titulo">
+      <div class="secao-cabeca">
+        <p class="etiqueta surgir">Como funciona</p>
+        <h2 class="secao-titulo surgir" id="processo-titulo">Da conversa ao site no ar</h2>
+        <p class="secao-sub surgir">Um caminho curto e claro. Você acompanha cada etapa e aprova antes de publicar.</p>
+      </div>
+
+      <ol class="degraus">
+        <li class="degrau surgir">
+          <h3>Conversa</h3>
+          <p>Pelo WhatsApp, entendemos o seu negócio, o que você vende e como atende.</p>
+        </li>
+        <li class="degrau surgir">
+          <h3>Projeto</h3>
+          <p>Montamos as páginas, as cores da sua marca e o que o site precisa fazer.</p>
+        </li>
+        <li class="degrau surgir">
+          <h3>Criação</h3>
+          <p>Construímos o site, ligamos agenda, loja e WhatsApp, e você revisa.</p>
+        </li>
+        <li class="degrau degrau-topo surgir">
+          <h3>Site no ar</h3>
+          <p>Publicamos no seu domínio e ensinamos você a usar. Depois, seguimos no suporte.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Monte seu site: a parte interativa -->
+    <section class="secao" id="monte" aria-labelledby="monte-titulo">
+      <div class="monte">
+        <div class="monte-texto">
+          <p class="etiqueta etiqueta-esquerda surgir">Monte seu site</p>
+          <h2 class="secao-titulo secao-titulo-esquerda surgir" id="monte-titulo">Escolha e veja na hora</h2>
+          <p class="secao-sub secao-sub-esquerda surgir">Marque o tipo de site e os extras. A prévia muda com você, e o pedido vai pronto para o nosso WhatsApp.</p>
+
+          <form class="monte-form surgir" id="monte-form">
+            <fieldset class="grupo">
+              <legend>Tipo de site</legend>
+              <div class="opcoes">
+                <label class="opcao"><input type="radio" name="tipo" value="agendamento" checked><span>Agendamento</span></label>
+                <label class="opcao"><input type="radio" name="tipo" value="loja"><span>Loja virtual</span></label>
+                <label class="opcao"><input type="radio" name="tipo" value="institucional"><span>Institucional</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="grupo">
+              <legend>Extras</legend>
+              <div class="opcoes">
+                <label class="opcao"><input type="checkbox" name="extra" value="dominio"><span>Domínio próprio</span></label>
+                <label class="opcao"><input type="checkbox" name="extra" value="instagram"><span>Instagram no site</span></label>
+                <label class="opcao"><input type="checkbox" name="extra" value="mapa"><span>Google Maps</span></label>
+              </div>
+            </fieldset>
+            <a class="botao botao-destaque botao-brilho" id="monte-enviar" href="https://wa.me/5562981343567?text=Ol%C3%A1%2C%20Imp%C3%A9rio%20Web!%20Quero%20um%20or%C3%A7amento%20de%20site." target="_blank" rel="noopener">Enviar pedido no WhatsApp</a>
+          </form>
+        </div>
+
+        <div class="previa surgir" data-ui aria-live="polite">
+          <div class="previa-barra" aria-hidden="true"><span></span><span></span><span></span><em id="previa-endereco">seunegocio.com.br</em></div>
+          <div class="previa-tela" id="previa-tela" data-tipo="agendamento">
+            <div class="previa-hero">
+              <strong id="previa-titulo">Agende seu horário</strong>
+              <span id="previa-sub">Escolha o serviço, o dia e a hora.</span>
+            </div>
+            <div class="previa-corpo previa-corpo-agendamento" aria-hidden="true">
+              <span>09:00</span><span>10:00</span><span class="escolhido">11:00</span><span>14:00</span><span>15:00</span><span>16:30</span>
+            </div>
+            <div class="previa-corpo previa-corpo-loja" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="previa-corpo previa-corpo-institucional" aria-hidden="true">
+              <span class="linha-longa"></span><span class="linha-media"></span><span class="linha-curta"></span>
+            </div>
+            <div class="previa-extras" aria-hidden="true">
+              <span class="extra-instagram">Instagram</span>
+              <span class="extra-mapa">Como chegar</span>
+            </div>
+            <span class="previa-whats" aria-hidden="true">WhatsApp</span>
+          </div>
+          <p class="previa-resumo" id="previa-resumo">Site de agendamento</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dúvidas -->
+    <section class="secao" id="duvidas" aria-labelledby="duvidas-titulo">
+      <div class="duvidas">
+        <div class="duvidas-cabeca">
+          <p class="etiqueta etiqueta-esquerda surgir">Dúvidas</p>
+          <h2 class="secao-titulo secao-titulo-esquerda surgir" id="duvidas-titulo">Perguntas frequentes</h2>
+          <p class="secao-sub secao-sub-esquerda surgir">Não achou a sua? Mande no WhatsApp, respondemos rápido.</p>
+          <a class="botao botao-escuro surgir" href="https://wa.me/5562981343567?text=Ol%C3%A1%2C%20Imp%C3%A9rio%20Web!%20Tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Perguntar no WhatsApp</a>
+        </div>
+        <div class="duvidas-lista">
+          <details class="duvida surgir">
+            <summary>Quanto tempo leva para o site ficar pronto?</summary>
+            <p>Um site institucional ou de agendamento fica pronto em média entre 7 e 15 dias. Lojas virtuais com muitos produtos podem levar um pouco mais. O prazo exato combinamos na primeira conversa.</p>
+          </details>
+          <details class="duvida surgir">
+            <summary>O site funciona bem no celular?</summary>
+            <p>Sim. Todo site é pensado primeiro para o celular, que é de onde vem a maior parte das visitas, e funciona também no computador e no tablet.</p>
+          </details>
+          <details class="duvida surgir">
+            <summary>Preciso ter domínio e hospedagem?</summary>
+            <p>Não precisa se preocupar. Ajudamos a registrar o seu domínio (seunegocio.com.br) e cuidamos da publicação do site.</p>
+          </details>
+          <details class="duvida surgir">
+            <summary>Consigo mudar textos, fotos e preços depois?</summary>
+            <p>Sim. Você recebe um acesso simples para atualizar o que quiser, e também pode pedir alterações para a nossa equipe.</p>
+          </details>
+          <details class="duvida surgir">
+            <summary>Como funciona o pagamento?</summary>
+            <p>Combinamos o valor e a forma de pagamento depois de entender o que o seu site precisa. Aceitamos Pix e cartão.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada final -->
+    <section class="chamada" aria-labelledby="chamada-titulo">
+      <div class="horizonte horizonte-topo" aria-hidden="true"></div>
+      <h2 class="chamada-titulo surgir" id="chamada-titulo">Pronto para abrir as portas online?</h2>
+      <p class="chamada-sub surgir">Conte o que você precisa e receba um orçamento sem compromisso.</p>
+      <div class="hero-botoes surgir">
+        <a class="botao botao-destaque botao-brilho" href="https://wa.me/5562981343567?text=Ol%C3%A1%2C%20Imp%C3%A9rio%20Web!%20Quero%20um%20or%C3%A7amento%20de%20site." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="botao botao-escuro" href="tel:+5562981343567">Ligar (62) 98134-3567</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-linha">
+      <ul class="rodape-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#monte">Monte seu site</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+      <p class="rodape-contato">WhatsApp <a href="https://wa.me/5562981343567" target="_blank" rel="noopener">(62) 98134-3567</a></p>
+    </div>
+    <p class="rodape-nome" aria-hidden="true">Império Web</p>
+    <p class="rodape-copia">© 2026 Império Web. Sites com agendamento, lojas virtuais e muito mais.</p>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+<script src="scenes/stage.js"></script>
+<script src="scenes/coroa.js"></script>
+<script src="imperio-bits.js"></script>
+<script src="script.js"></script>
+<script>Stage.smooth(); Stage.init();</script>
+<script type="module" src="coroa-3d.js"></script>
+</body>
+</html>
+
+</body></html>
